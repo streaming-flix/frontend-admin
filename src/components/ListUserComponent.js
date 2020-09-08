@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-// import ApiService from "../../service/ApiService";
+import React, { useEffect } from 'react';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -26,8 +25,7 @@ import { deleteMovie } from '../redux/actions/DeleteMovie';
         return (
             <div>
                <Typography variant="h4" style={style}>All Movie</Typography>
-                {/* onClick={() => this.addUser()} */}
-                <Button variant="contained" color="primary" href='/AddMovie'>
+                               <Button variant="contained" color="primary" href='/AddMovie'>
                     Add Movie
                 </Button>
 
@@ -51,10 +49,8 @@ import { deleteMovie } from '../redux/actions/DeleteMovie';
                 movie.result.map((item, index) => {
                 return(
                     <TableBody>
-                        {/* {this.state.users.map(row => (key={row.id} */}
                             <TableRow key={item._id}>
                                 <TableCell component="th" scope="row" >
-                                    {/* {row.id} */}
                                     {index+1}
                                 </TableCell>
                         <TableCell>{item.title}</TableCell>

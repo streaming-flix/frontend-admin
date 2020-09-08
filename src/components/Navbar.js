@@ -20,7 +20,7 @@ const NavBar = () => {
             <AppBar position="static">
                 <Toolbar>
                     <Typography variant="h6" style={style}>
-                       <Link to=''>Admin StreamingFlix</Link>
+                       <Link to='/pageAdmin'>Admin StreamingFlix</Link>
                     </Typography>
                     <Button onClick={() => dispatch(logout(history))} color="inherit">Logout</Button>
                 </Toolbar>

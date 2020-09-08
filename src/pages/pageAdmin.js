@@ -1,15 +1,13 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import AppRouter from '../components/AppRouter';
-import Container from '@material-ui/core/Container';
+import adminPage from '../components/ListUserComponent';
+// import Container from '@material-ui/core/Container';
 
 function pageAdmin() {
     return (
         <div>
             <Navbar/>
-            <Container>
-                <AppRouter/>
-          </Container>
+            <adminPage/>
         </div>
     );
 }
