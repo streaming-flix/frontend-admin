@@ -9,7 +9,8 @@ const addMovie = (payload) => {
 
 
 const uploadMovie = (formData, history) => async (dispatch) => {
-    const token = localStorage.getItem("token");
+    const token = JSON.parse(localStorage.getItem("token")).token; 
+    console.log(token);
     const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/movie`;
     const options = {
         method: 'POST',

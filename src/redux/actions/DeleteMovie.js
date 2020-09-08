@@ -10,7 +10,7 @@ const delMovie = (payload) => {
 
 
 const deleteMovie = (id) => async (dispatch) => {
-    const token = localStorage.getItem("token");
+    const token = JSON.parse(localStorage.getItem("token")).token;
     try {
     const url = `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/movie/delete/${id}`;
     const options = {

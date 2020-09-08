@@ -22,6 +22,7 @@ const loginAdmin = (formData, history) => async (dispatch) => {
 
         const response = await fetch(url, options);
         const result = await response.json();
+        console.log(result, 'result');
 
         if (response.status === 200) {
             Swal.fire({
@@ -31,7 +32,7 @@ const loginAdmin = (formData, history) => async (dispatch) => {
                 confirmButtonText: "Success",
             });
 
-            localStorage.setItem("token", result.result);
+            localStorage.setItem("token", JSON.stringify(result));
             dispatch(getUserLogin(result));
             history.push("/pageAdmin");
         } else if (response.status === 403) {

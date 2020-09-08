@@ -182,19 +182,6 @@ console.log(form)
             margin="normal"
             required
             fullWidth
-            name="year"
-            label="year"
-            type="year"
-            id="year"
-            value={form.year}
-            onChange={handleChange}
-            autoComplete="year"
-          />
-               <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
             name="rating"
             label="rating"
             type="rating"

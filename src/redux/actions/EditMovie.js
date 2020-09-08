@@ -13,7 +13,7 @@ const findUpdate = (payload) => {
 
 
 const updateMovie = (formData, history, id) => async (dispatch) => {
-   const token = localStorage.getItem("token");
+const token = JSON.parse(localStorage.getItem("token")).token;
    try {
     for (let key in formData) {
         if (formData[key] === "") {
@@ -39,7 +39,7 @@ const updateMovie = (formData, history, id) => async (dispatch) => {
             title: "Your data is successfully updated",
         });
 
-        history.goBack();
+        history.push('/pageAdmin');
     } else {
         Swal.fire({
             icon: "error",
@@ -47,7 +47,7 @@ const updateMovie = (formData, history, id) => async (dispatch) => {
         });
     }
 } catch (error) {
-    console.log(error);
+    console.log(error, 'error');
 }
 };
 //    try {

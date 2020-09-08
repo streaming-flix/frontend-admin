@@ -28,7 +28,7 @@ function App() {
           <NavBar/>
             <AddMovie/>
           </Route>
-          <Route exact path="/EditMovie">
+          <Route exact path="/EditMovie/:id">
           <NavBar/>
             <EditMovie/>
           </Route>

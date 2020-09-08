@@ -88,8 +88,8 @@ console.log(form)
         <Typography component="h1" variant="h5">
           Form Edit Movie
         </Typography>
-        onSubmit={handleSubmit}
-        <form  className={classes.form} noValidate>
+        
+        <form onSubmit={handleSubmit}  className={classes.form} noValidate>
           <TextField
             variant="outlined"
             margin="normal"
@@ -168,19 +168,6 @@ console.log(form)
             defaultValue={form.sipnosis}
             onChange={handleChange}
             autoComplete="sypnosis"
-          />
-               <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            name="year"
-            label="year"
-            type="year"
-            id="year"
-            defaultValue={form.year}
-            onChange={handleChange}
-            autoComplete="year"
           />
                <TextField
             variant="outlined"
